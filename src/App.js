@@ -41,7 +41,7 @@ class App extends Component {
 
   async componentDidMount() {
     this.subscription = API.graphql(
-      graphqlOperation(onCreateMessage, { input: { owner: '4e4b1bf2-3594-4c28-abe4-171a2cd07062' }})
+      graphqlOperation(onCreateMessage)
     ).subscribe({
 
       next: event => {
